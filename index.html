@@ -16,6 +16,10 @@
   <body>
     <header>
       <picture>
+        <source
+          srcset="./assets/tablet/image-hero.jpg"
+          media="(min-width: 768px)"
+        />
         <img src="./assets/mobile/image-hero.jpg" />
       </picture>
       <section>
@@ -31,6 +35,10 @@
     <main>
       <section class="grid-1">
         <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/tablet/image-grid-1.jpg"
+          />
           <img src="./assets/mobile/image-grid-1.jpg" />
         </picture>
         <div>
@@ -42,14 +50,21 @@
         </div>
       </section>
       <section class="grid-2">
-        <div>
-          <picture class="grid-img">
-            <img src="./assets/mobile/image-grid-2.jpg" />
-          </picture>
-          <picture class="grid-img-2">
-            <img src="./assets/mobile/image-grid-3.jpg" />
-          </picture>
-        </div>
+        <picture class="grid-img">
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/tablet/image-grid-2.jpg"
+          />
+          <img src="./assets/mobile/image-grid-2.jpg" />
+        </picture>
+        <picture class="grid-img-2">
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/tablet/image-grid-3.jpg"
+          />
+          <img src="./assets/mobile/image-grid-3.jpg" />
+        </picture>
+
         <div class="content">
           <h2>Come &amp; be inspired</h2>
           <p>

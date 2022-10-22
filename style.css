@@ -5,6 +5,7 @@
   --primary-white: hsla(0, 0%, 100%, 1);
   --primary-gold: hsla(24, 56%, 63%, 1);
   --secondary-black: hsla(0, 0%, 8%, 1);
+  --primary-grey: #444444;
 }
 
 * {
@@ -29,6 +30,7 @@ h1 {
 
 p {
   font-family: "Outfit", sans-serif;
+  color: var(--primary-grey);
 }
 
 a {
@@ -73,12 +75,19 @@ header a::after {
   justify-content: center;
 }
 
+main {
+  margin: 7.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6875rem;
+}
+
 img {
   width: -webkit-fill-available;
 }
 
 picture {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
 }
 
@@ -87,6 +96,7 @@ h2 {
   text-transform: uppercase;
   font-size: 50px;
   line-height: 45px;
+  margin-top: 25px;
 }
 
 section {
@@ -100,23 +110,27 @@ section p {
 }
 
 .grid-1 picture {
-  margin-bottom: 1.5rem;
+  order: 1;
+}
+
+.grid-1 div {
+  order: 2;
 }
 
 .grid-2 {
+  display: grid;
   grid-template-areas: "img1" "img2" "section";
+  gap: 1rem;
 }
 
 .grid-img {
   grid-area: img1;
   display: flex;
-  margin-bottom: 1rem;
 }
 
 .grid-img-2 {
   grid-area: img2;
   display: flex;
-  margin-bottom: 1rem;
 }
 
 .content {
@@ -128,17 +142,21 @@ section p {
 
 .content h2 {
   color: var(--primary-white);
+  margin-top: 0;
 }
 
 .content p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
+  color: var(--primary-white);
 }
 
 footer {
   background: var(--primary-black);
   color: var(--primary-white);
   padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 footer h3 {
@@ -154,11 +172,15 @@ footer p {
   font-size: 16px;
   line-height: 26px;
   margin: 2.25rem 0;
+  color: #ffffff;
+  max-width: 280px;
 }
 
 footer .logo {
   width: 45%;
   height: 45%;
+  object-fit: contain;
+  max-width: 120px;
 }
 
 footer img {
@@ -170,6 +192,70 @@ footer img {
 
 footer ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    position: relative;
+  }
+
+  header section {
+    position: absolute;
+    right: 0;
+    max-width: 385px;
+    bottom: 15%;
+    padding: 0rem;
+  }
+
+  h1 {
+    font-size: 70px;
+    line-height: 65px;
+    width: 85%;
+    max-width: 380px;
+  }
+
+  header p {
+    width: 90%;
+  }
+
+  section {
+    padding: 0rem 2rem;
+  }
+
+  section p {
+    margin: 1.5rem 0;
+  }
+
+  .grid-1 {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+  }
+
+  .grid-1 picture {
+    order: 2;
+  }
+
+  .grid-1 div {
+    order: 1;
+    width: 65%;
+  }
+
+  .grid-2 {
+    grid-template-areas: "img1 img2" "img1 section";
+    gap: 0.75rem;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer p {
+    margin: 0;
+  }
 }
