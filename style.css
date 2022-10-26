@@ -75,8 +75,17 @@ header a::after {
   justify-content: center;
 }
 
+header a:hover {
+  background-color: var(--primary-gold);
+  cursor: pointer;
+}
+
+header a:hover::after {
+  background-color: var(--primary-black);
+}
+
 main {
-  margin: 7.5rem 0;
+  margin: 7.5rem auto;
   display: flex;
   flex-direction: column;
   gap: 0.6875rem;
@@ -196,6 +205,11 @@ footer ul {
   align-items: center;
 }
 
+footer li:hover {
+  cursor: pointer;
+  background-color: var(--primary-gold);
+}
+
 @media (min-width: 768px) {
   header {
     display: flex;
@@ -220,6 +234,13 @@ footer ul {
   header p {
     width: 90%;
   }
+  main {
+    max-width: 90%;
+  }
+
+  main img {
+    width: 100%;
+  }
 
   section {
     padding: 0rem 2rem;
@@ -233,6 +254,8 @@ footer ul {
     display: grid;
     grid-template-columns: 300px 1fr;
     align-items: center;
+    justify-items: flex-start;
+    place-items: normal;
   }
 
   .grid-1 picture {
@@ -247,6 +270,7 @@ footer ul {
   .grid-2 {
     grid-template-areas: "img1 img2" "img1 section";
     gap: 0.75rem;
+    grid-template-columns: 3fr 2fr;
   }
 
   footer {
@@ -257,5 +281,122 @@ footer ul {
 
   footer p {
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header picture {
+    position: relative;
+    display: flex;
+    /* max-height: 800px; */
+  }
+
+  header img {
+    width: 38%;
+    object-fit: contain;
+  }
+
+  header picture::before {
+    content: "";
+    /* position: absolute; */
+    background-color: #151515;
+    width: 450px;
+  }
+
+  header section {
+    position: absolute;
+    display: flex;
+    max-width: 100%;
+    gap: 14rem;
+    width: 80%;
+    margin: 0 -1rem;
+    right: 0.75rem;
+    /* max-width: 1024px; */
+  }
+
+  header p {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 1.5rem 1rem;
+  }
+
+  header div {
+    max-width: 400px;
+    /* margin-left: auto; */
+  }
+
+  h1 {
+    /* position: absolute; */
+    left: 10rem;
+    mix-blend-mode: difference;
+    color: white;
+    font-size: 80px;
+    line-height: 72px;
+    max-width: 450px;
+    top: 10rem;
+  }
+
+  main {
+    width: 85%;
+    gap: 1.875rem;
+  }
+
+  main img {
+    width: 100%;
+  }
+
+  section p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .grid-1 {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .grid-1 div {
+    width: 70%;
+  }
+
+  .grid-2 {
+    gap: 1.875rem;
+  }
+
+  .content {
+    padding: 4.05rem 3rem;
+  }
+
+  footer {
+    justify-content: space-evenly;
+  }
+
+  footer .logo {
+    height: 58px;
+  }
+
+  footer p {
+    max-width: 425px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  header h1 {
+    font-size: 96px;
+    line-height: 88px;
+  }
+
+  header section {
+    top: 12rem;
+    right: 9rem;
+    gap: 19rem;
   }
 }
