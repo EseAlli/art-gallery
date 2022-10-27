@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/challenges/art-gallery-website-yVdrZlxyA/hub/art-gallery-site-CkmRXbXH7\_](https://www.frontendmentor.io/challenges/art-gallery-website-yVdrZlxyA/hub/art-gallery-site-CkmRXbXH7_)
+- Live Site URL: [https://art-gallery-cyan-five.vercel.app/](https://art-gallery-cyan-five.vercel.app/)
 
 ## My process
 
