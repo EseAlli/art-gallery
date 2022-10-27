@@ -119,10 +119,12 @@ section {
 section.location {
   background-color: var(--primary-black);
   color: var(--primary-white);
+  padding: 1.75rem 1rem;
 }
 
 .location h2 {
   color: var(--primary-white);
+  max-width: 120px;
 }
 
 .location h3 {
@@ -136,6 +138,7 @@ section.location {
 .location p {
   color: var(--primary-white);
   margin-top: 0;
+  max-width: 400px;
 }
 
 section p {
@@ -192,6 +195,7 @@ section p {
   top: 0;
   text-decoration: none;
   width: 70%;
+  max-width: 264px;
 }
 
 .back-btn a {
@@ -256,6 +260,7 @@ footer h3 {
   text-transform: uppercase;
   width: 40%;
   font-size: 1.75rem;
+  max-width: 123px;
 }
 
 footer p {
@@ -318,7 +323,8 @@ footer li:hover {
   header p {
     width: 90%;
   }
-  main {
+
+  .home {
     max-width: 90%;
   }
 
@@ -332,6 +338,20 @@ footer li:hover {
 
   section p {
     margin: 1.5rem 0;
+  }
+
+  section.location {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.5rem 2.5rem;
+  }
+
+  .location h2 {
+    margin-top: 0;
+  }
+
+  .location h3 {
+    margin-top: 0;
   }
 
   .grid-1 {
@@ -355,6 +375,10 @@ footer li:hover {
     grid-template-areas: "img1 img2" "img1 section";
     gap: 0.75rem;
     grid-template-columns: 3fr 2fr;
+  }
+
+  .back-btn {
+    left: 5%;
   }
 
   footer {
