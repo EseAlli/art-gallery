@@ -41,6 +41,10 @@ ul {
   list-style: none;
 }
 
+header {
+  max-height: 800px;
+}
+
 header section {
   padding: 1rem;
 }
