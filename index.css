@@ -46,9 +46,13 @@ header section {
 }
 
 header a {
-  margin: 2rem 0;
-  display: inline-block;
   inline-size: 50%;
+  margin: 2rem 0;
+}
+
+header a,
+.back-btn a {
+  display: inline-block;
   background-color: var(--primary-black);
   color: var(--primary-white);
   padding: 1.5rem 0;
@@ -62,11 +66,10 @@ header a {
   position: relative;
 }
 
-header a::after {
-  content: url(./assets/icon-arrow-right.svg);
+header a::after,
+.back-btn a::before {
   background-color: var(--primary-gold);
   position: absolute;
-  right: -2rem;
   height: 100%;
   top: 0;
   display: flex;
@@ -75,13 +78,22 @@ header a::after {
   justify-content: center;
 }
 
-header a:hover {
-  background-color: var(--primary-gold);
-  cursor: pointer;
+header a::after {
+  content: url(./assets/icon-arrow-right.svg);
+  right: -2rem;
 }
 
-header a:hover::after {
+header a:hover,
+.back-btn a:hover {
+  background-color: var(--primary-gold);
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+header a:hover::after,
+.back-btn a:hover::before {
   background-color: var(--primary-black);
+  transition: all 0.5s ease-in;
 }
 
 .home {
@@ -124,7 +136,7 @@ section.location {
 
 .location h2 {
   color: var(--primary-white);
-  max-width: 120px;
+  max-width: 280px;
 }
 
 .location h3 {
@@ -200,31 +212,12 @@ section p {
 
 .back-btn a {
   margin: 0;
-  display: inline-block;
   inline-size: 100%;
-  background-color: var(--primary-black);
-  color: var(--primary-white);
-  padding: 1.5rem 0.5rem 1.5rem 2.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Big Shoulders Display", cursive;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.12rem;
-  position: relative;
+  padding: 1.5rem 2rem 1.5rem 4.75rem;
 }
 
 .back-btn a::before {
   content: url(./assets/icon-arrow-left.svg);
-  background-color: var(--primary-gold);
-  position: absolute;
-  height: 100%;
-  top: 0;
-  display: flex;
-  align-items: center;
-  inline-size: 48px;
-  justify-content: center;
   left: 0;
 }
 
@@ -444,7 +437,7 @@ footer li:hover {
     top: 10rem;
   }
 
-  main {
+  .home {
     width: 85%;
     gap: 1.875rem;
   }
@@ -461,6 +454,15 @@ footer li:hover {
   h2 {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  section.location {
+    justify-content: space-around;
+    padding: 5.5rem 0.75rem;
+  }
+
+  .location p {
+    max-width: 520px;
   }
 
   .grid-1 {
