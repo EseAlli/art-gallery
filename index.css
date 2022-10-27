@@ -289,7 +289,11 @@ footer ul {
 
 footer li:hover {
   cursor: pointer;
-  background-color: var(--primary-gold);
+  filter: invert(0.45) sepia(100%) brightness(80%);
+}
+
+.location-footer li:hover {
+  filter: invert(1);
 }
 
 @media (min-width: 768px) {
