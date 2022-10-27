@@ -84,11 +84,15 @@ header a:hover::after {
   background-color: var(--primary-black);
 }
 
-main {
+.home {
   margin: 7.5rem auto;
   display: flex;
   flex-direction: column;
   gap: 0.6875rem;
+}
+
+.location {
+  position: relative;
 }
 
 img {
@@ -110,6 +114,28 @@ h2 {
 
 section {
   padding: 1.75rem 1rem;
+}
+
+section.location {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.location h2 {
+  color: var(--primary-white);
+}
+
+.location h3 {
+  margin: 3rem 0 1.25rem 0;
+  color: var(--primary-gold);
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.location p {
+  color: var(--primary-white);
+  margin-top: 0;
 }
 
 section p {
@@ -160,9 +186,67 @@ section p {
   color: var(--primary-white);
 }
 
-footer {
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  width: 70%;
+}
+
+.back-btn a {
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  padding: 1.5rem 0.5rem 1.5rem 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.12rem;
+  position: relative;
+}
+
+.back-btn a::before {
+  content: url(./assets/icon-arrow-left.svg);
+  background-color: var(--primary-gold);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  inline-size: 48px;
+  justify-content: center;
+  left: 0;
+}
+
+.home-footer {
   background: var(--primary-black);
   color: var(--primary-white);
+}
+
+.home-footer p {
+  color: #ffffff;
+}
+
+.location-footer {
+  background-color: var(--primary-gold);
+  color: var(--primary-black);
+}
+
+.location-footer p {
+  color: var(--primary-black);
+}
+
+.location-footer img {
+  filter: invert(1);
+}
+
+footer {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -170,7 +254,7 @@ footer {
 
 footer h3 {
   text-transform: uppercase;
-  width: 30%;
+  width: 40%;
   font-size: 1.75rem;
 }
 
