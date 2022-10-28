@@ -42,7 +42,7 @@ ul {
 }
 
 header {
-  max-height: 800px;
+  max-height: 700px;
 }
 
 header section {
@@ -401,7 +401,7 @@ footer li:hover {
   }
 
   header img {
-    width: 38%;
+    width: 32%;
     object-fit: contain;
   }
 
